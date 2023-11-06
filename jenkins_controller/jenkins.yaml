@@ -8,7 +8,6 @@ jenkins:
     globalMatrix:
       permissions:
         - "Overall/Administer:panda"
-
 tool:
   sonarRunnerInstallation:
     installations:
@@ -18,10 +17,12 @@ tool:
           installers:
           - sonarRunnerInstaller:
               id: "5.0.1.3006"
-
 unclassified:
   location:
     url: "http://192.168.44.44:8880/"
+  locale:
+    ignoreAcceptLanguage: true
+    systemLocale: "en"
   sonarGlobalConfiguration:
     buildWrapperEnabled: true
     installations:
