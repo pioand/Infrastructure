@@ -19,6 +19,7 @@ jenkins:
     globalMatrix:
       permissions:
         - "Overall/Administer:panda"
+  numExecutors: 0
 tool:
   sonarRunnerInstallation:
     installations:
