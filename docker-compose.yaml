@@ -10,6 +10,9 @@ services:
     volumes:
       - ./jenkins_controller/jenkins.yaml:/usr/share/jenkins/ref/jenkins.yaml
     restart: always
+    depends_on:
+      artifactory:
+        condition: service_healthy
   jenkins_agent:
     build: ./jenkins_agent
     container_name: jenkins_agent
