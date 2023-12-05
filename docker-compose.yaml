@@ -33,6 +33,14 @@ services:
     ports:
       - "9000:9000"
     restart: always
+  selenium_hub:
+    container_name: selenium/hub
+    depends_on: jenkins
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+    restart: always
   # artifactory:
   #   image: docker.bintray.io/jfrog/artifactory-jcr:7.39.4
   #   container_name: artifactory
